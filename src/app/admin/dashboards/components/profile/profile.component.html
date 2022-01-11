@@ -1,0 +1,43 @@
+<div class="block-header">
+    <div class="row">
+        <div class="col-lg-7 col-md-6 col-sm-12">
+            <h2>Dashboard</h2>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a [routerLink]="['/dashboard']"><i class="zmdi zmdi-home"></i> Aero</a></li>
+                <li class="breadcrumb-item active">profile User </li>
+            </ul>
+            <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
+        </div>
+      
+        <div class="col-lg-5 col-md-6 col-sm-12">                
+            <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i class="zmdi zmdi-arrow-right"></i></button>
+        </div>
+    </div>
+</div>
+
+
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                 <th scope="col">Name</th>
+                <th scope="col">Email </th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Country</th>
+                <th scope="col">Company</th>
+                <th scope="col">Designation</th>
+            </tr>
+            </thead>
+             <tbody>
+                <tr *ngFor= "let user of allUser">
+                    {{user}}
+                    <td>{{user.Fist_Name}}</td>
+                    <td>{{user.Email}}</td>
+                    <td>{{user.Phone}}</td>
+                    <td>{{user.Country}}</td>
+                    <td>{{user.Company}}</td>
+
+                </tr>
+                
+                   </tbody>
+          </table>
+    

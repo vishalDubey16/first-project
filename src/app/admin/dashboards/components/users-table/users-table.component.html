@@ -1,0 +1,22 @@
+<app-index></app-index>
+<table id="DataTableList" class="table table-center table-hover datatable">
+    <thead class="thead-light">
+         <tr class="table-header">
+            <th>id</th>
+            <th>First_Name</th>
+            <th>Last_Name</th>
+            <th>User_Name</th>
+            <th>Email</th>
+        </tr>
+        
+        <tr *ngFor="let book of allUser?.data">
+            <td>{{book.id}}</td>
+            <td>{{book.first_name}}</td>
+            <td>{{book.last_name}}</td>
+            <td>{{book.user_name}}</td>
+            <td>{{book.email}}</td>
+        </tr>
+    </thead>
+    <tbody>
+</tbody>
+</table>
