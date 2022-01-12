@@ -20,13 +20,13 @@ export class ProfileComponent implements OnInit {
 
     let id = this.route.snapshot.params.id
     let link = ApiService.service_Url + id;
-    this._http.get(link).pipe(map((userdata:any) => this.allUser =( userdata)))
-    .subscribe((res) => {
+    this._http.get(link).subscribe((res)=>{
     this.allUser=res
     console.log(this.allUser);
       
     })
   }//data get form data by id
+   this._http.get(link).pipe(map((userdata:any) => this.allUser =( userdata)))
   
 
 }
