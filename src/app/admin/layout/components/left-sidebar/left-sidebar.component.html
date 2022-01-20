@@ -16,6 +16,7 @@
             </li>
            
             <li class="active open"><a href="index.html" class="toggled waves-effect waves-block"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+            <li><a routerLink="/dashboard/notification" class=" waves-effect waves-block"><i class="zmdi zmdi-account"></i><span>Notification</span></a></li>
             <li><a href="my-profile.html" class=" waves-effect waves-block"><i class="zmdi zmdi-account"></i><span>Our Profile</span></a></li>
             <li><a routerLink="/dashboard/user-table" class=" waves-effect waves-block"><i class="zmdi zmdi-account"></i><span>users</span></a></li>
 
@@ -29,8 +30,8 @@
             </li>
             <li> <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block" [ngClass]="{'toggled':activeMenu == 'projects'}" (click)="openItem('projects')"><i class="zmdi zmdi-assignment"></i><span>Projects</span></a>
                 <ul class="ml-menu" [ngClass]="{'d-block':activeMenu == 'projects'}">
-                    <li><a href="project-list.html" class=" waves-effect waves-block">Projects List</a></li>
-                    <li><a href="taskboard.html" class=" waves-effect waves-block">Taskboard</a></li>
+                    <li><a href="/dashboard/project-list" class=" waves-effect waves-block">Project List</a></li>
+                    <li><a href="/#" class=" waves-effect waves-block">Taskboard</a></li>
                     <li><a href="ticket-list.html" class=" waves-effect waves-block">Ticket List</a></li>
                     <li><a href="ticket-detail.html" class=" waves-effect waves-block">Ticket Detail</a></li>
                 </ul>

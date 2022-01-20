@@ -3,23 +3,58 @@
 
 <head>
     <meta charset="utf-8">
+   <!-- for j query -->
+   
+   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="description" content="Aero Angular 8 admin dashboard with ui kit.">
     <title>:: Aero Angular :: </title>
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-   </head>
+   <!-- //data table -->
+
+    <link rel="stylesheet" type="text/css" href="assets/scss/jquery.dataTables.css">
+   <link rel="stylesheet" type="text/css" href="assets/scss/jquery.dataTables.min.css">
+        <meta name="theme-color" content="#1976d2">
+ </head>
 
 <body>
     <app-root>
         <div class="loader">Please wait...</div>
     </app-root>
 
+     
      <!-- Datatables JS -->
      <script src="assets/js/jquery.dataTables.min.js"></script>
      <script src="assets/js/datatables.min.js"></script>
+
+
+     <!-- test -->
+    
+
+
+
+        
+
+
+     
+ <script>
+        function isNumberKeynum(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57) && (charCode != 46) && (charCode != 45)) {
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <script>
+
+    </script>
+
+
 
 </body>
 

@@ -14,6 +14,7 @@ export class FormComponent implements OnInit {
   public Country = ['India','USA','UK','China','Japan '];
 
   public submitted = false;
+    user: any;
 
 
   constructor(private router: Router, private _http: HttpClient) { }
@@ -25,10 +26,6 @@ export class FormComponent implements OnInit {
     Phone: new FormControl('', [Validators.required, Validators.minLength(6)]),
     Country: new FormControl('', [Validators.required]),
     State: new FormControl('', [Validators.required]),
-    City: new FormControl('', [Validators.required]),
-    Company: new FormControl('', [Validators.required]),
-    Designation: new FormControl('', [Validators.required]),
-    Message: new FormControl('', [Validators.required]),
     
   });
 
@@ -41,6 +38,7 @@ export class FormComponent implements OnInit {
       return
     }
     else {
+      debugger
       // form.append('transactionData',JSON.stringify(transactionData));
       // form.append('original_status',original_status);
       // form.append('isSplit',isSplitData);
@@ -59,11 +57,7 @@ export class FormComponent implements OnInit {
       formData.append('Phone',this.userForm.value.Phone);
       formData.append('Country',this.userForm.value.Country);
       formData.append('State',this.userForm.value.State);
-      formData.append('City',this.userForm.value.City);
-      formData.append('Company',this.userForm.value.Company);
-      formData.append('Designation',this.userForm.value.Designation);
-      formData.append('Message',this.userForm.value.Message);
-
+      
           var mailLink = ApiService.mail_Sevice + ApiService.Send_mail;
           this._http.post(mailLink, formData).subscribe((result) => {
           // console.log(result);

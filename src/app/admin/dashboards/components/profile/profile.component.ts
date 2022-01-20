@@ -26,8 +26,8 @@ export class ProfileComponent implements OnInit {
       
     })
   }//data get form data by id
-   this._http.get(link).pipe(map((userdata:any) => this.allUser =( userdata)))
-   console.log(this.allUser);
+  //  this._http.get(link).pipe(map((userdata:any) => this.allUser =( userdata)))
+  //  console.log(this.allUser);
   //  get profile info using map operator
 
  }

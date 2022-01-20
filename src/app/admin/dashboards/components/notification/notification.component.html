@@ -1,0 +1,93 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Notification</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item active">Notification</li>
+            </ul>
+        </div>
+
+        <div class="col-auto">
+            <a class="btn btn-primary filter-btn" href="javascript:void(0);" id="filter_search">
+                <i class="fas fa-filter"></i>
+            </a>
+        </div> 
+    </div>
+</div>
+<!-- /Page Header -->
+
+ <!-- Search Filter -->
+ <div class="filter-src-main">
+    <div class="filter-src-heading">
+        <div class="filter-src-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <h5>Filter</h5>
+    </div> 
+    <div class="filter-src-inner">
+            <div class="filter-src-row">
+            <div class="form-group">
+                <label>User Name</label>
+                <input id="filter_user_name" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="filter-src-row">
+            <div class="form-group">
+                <label>Title</label>
+                <input id="filter_title" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="filter-src-row">
+            <div class="form-group">
+                <label>Is Read</label>
+                <select id="filter_is_read" class="select form-control">
+                    <option value="">Select </option>
+                    <option value="1">Read</option>
+                    <option value="0">Unread</option>
+                </select>
+            </div>
+        </div>        
+    </div>
+    <div class="filter-footer-fix row m-0">
+        <div class="col">
+            <button type="button" (click)="FilterSearch()" class="btn btn-block btn-outline-primary active">Search</button>
+        </div>
+        <div class="col">
+            <button type="button" (click)="FilterReset()" class="btn btn-block btn-outline-danger active">Reset</button>
+        </div>
+    </div>
+</div> 
+<div class="filter-src-backdroup"></div>
+<!-- /Search Filter -->
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card card-table">
+            <div class="card-body">
+                <div class="table-responsive table-main">
+                    <table id="DataTableList" class="table table-center table-hover datatable">
+                        <thead class="thead-light">
+                            <tr>
+                                <td>Is Read</td>
+                                <td>User Name</td>
+                                <td>Title</td>
+                                <td>Notification Icon</td>
+                                <td>Screen No</td>
+                                <td>Created By</td>
+                                <td>Created Date</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

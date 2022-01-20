@@ -9,6 +9,8 @@ import { FormEditComponent } from './components/form-edit/form-edit.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { UsersTableComponent } from './components/users-table/users-table.component';
+import { NotificationComponent } from './components/notification/notification.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
 
 const routes: Routes = [
 
@@ -34,6 +36,15 @@ const routes: Routes = [
           {
             path : 'user-table',
             component : UsersTableComponent
+          },
+          {
+            path : 'notification',
+            component : NotificationComponent
+
+          },
+          {
+            path : 'project-list',
+            component : ProjectListComponent
           }
 
         

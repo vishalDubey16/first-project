@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { SortingPipe } from '../../_helper/sorting.pipe';
 import { ApiService } from '../../_service/api-service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { UserService } from '../../services/user.service';
+
 
 
 @Component({
@@ -15,9 +18,9 @@ export class FormListComponent implements OnInit {
   searchText;
   p: number = 1;
   SortbyParam = '';
+  isOpen = false;
 
-
-  constructor(private _http: HttpClient) { }
+  constructor(private _http: HttpClient,private router : Router,private UserService: UserService) { }
 
   ngOnInit() {  // get user
       let link = ApiService.service_Url;
@@ -36,4 +39,13 @@ export class FormListComponent implements OnInit {
 
   }
 
+
+  public viewProfile(profileBtnRef: HTMLButtonElement) {
+    this.UserService.viewProfileOverlay(profileBtnRef)
+  }
+
+  btnClick()
+  {
+    this.router.navigateByUrl('/dashboard/form'); 
+  }
 }

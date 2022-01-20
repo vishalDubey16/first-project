@@ -1,0 +1,159 @@
+
+<!-- Page Header -->
+ <div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Category Type</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item active">Category Type</li>
+            </ul>
+        </div>
+        <div class="col-auto">
+            <a title="Add plan" (click)="Plan_Model('0','','','','','','')" data-toggle="modal" data-target="#model_plan" href="javascript:void(0);" class="btn btn-primary mr-1" >
+                Add Plan
+            </a>
+            <a class="btn btn-primary filter-btn" href="javascript:void(0);" id="filter_search">
+                <i class="fas fa-filter"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- /Page Header -->
+
+
+ <!-- Search Filter -->
+ <div class="filter-src-main">
+    <div class="filter-src-heading">
+        <div class="filter-src-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <h5>Filter</h5>
+    </div> 
+    <div class="filter-src-inner">
+        <div class="filter-src-row">
+            <div class="form-group">
+                <label>Category Type</label>
+                <input id="filter_parameter_type" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="filter-src-row">
+            <div class="form-group">
+                <label>Status</label>
+                <select id="filter_status" class="select form-control">
+                    <option value="">Select Status</option>
+                    <option value="1">Active</option>
+                    <option value="0">Inactive</option>
+                </select>
+            </div>
+        </div>        
+    </div>
+    <div class="filter-footer-fix row m-0">
+        <div class="col">
+            <button type="button" (click)="FilterSearch()" class="btn btn-block btn-outline-primary active">Search</button>
+        </div>
+        <div class="col">
+            <button type="button" (click)="FilterReset()" class="btn btn-block btn-outline-danger active">Reset</button>
+        </div>
+    </div>
+</div> 
+<div class="filter-src-backdroup"></div>
+<!-- /Search Filter -->
+
+
+<!-- data Table List -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card card-table">
+            <div class="card-body">
+                <div class="table-responsive table-main">
+                    <table id="DataTableList" class="table table-center table-hover datatable">
+                        <thead class="thead-light">
+                            <tr>
+                                <td>#</td>
+                                <td>Category type</td>
+                                <td>Remark</td>
+                                <td>Status</td>
+                                <td>Actions</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Data model for Model_plan -->
+<div id="model_plan" class="modal custom-modal fade" role="dialog"  data-backdrop="static" [ngStyle]="{'display':display}">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title parameter_title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input id="plan_id" class="form-control" type="hidden">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Plan Type <span class="text-danger">*</span></label>
+                            <select id="plan_type" class="select form-control">
+                                <option value="">Select Plan Type</option>
+                                <option value="1">Free</option>
+                                <option value="2">Paid</option>
+                                <!-- <option value="3">Premium</option> -->
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Plan Name <span class="text-danger">*</span></label>
+                            <input id="plan_name" class="form-control" type="text">
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Title <span class="text-danger">*</span></label>
+                            <input id="title" class="form-control" type="text">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 monthSection">
+                        <div class="form-group">
+                            <label>Month <span class="text-danger">*</span></label>
+                            <input maxlength="2" id="month" class="form-control OnlyNumber" type="text">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 amountSection">
+                        <div class="form-group">
+                            <label>Amount <span class="text-danger">*</span></label>
+                            <input id="amount" class="form-control OnlyNumber" type="text">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea id="description" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="submit-section">
+                    <!-- <button (click)="Add_Plan()" class="btn btn-primary submit-btn" type="submit">Submit</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

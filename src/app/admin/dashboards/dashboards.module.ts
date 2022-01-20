@@ -20,12 +20,17 @@ import { SortingPipe } from './_helper/sorting.pipe';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { UsersTableComponent } from './components/users-table/users-table.component';
+import {OverlayModule} from '@angular/cdk/overlay';
+import { UserService } from './services/user.service';
+import { NotificationComponent } from './components/notification/notification.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
+
 
 
 
 
 @NgModule({
-  declarations: [DashboardComponent, IndexComponent,FormComponent,  HighlightDirective, FormEditComponent,FormListComponent, SortingPipe, ProfileComponent, LoginComponent, UsersTableComponent],
+  declarations: [DashboardComponent, IndexComponent,FormComponent,  HighlightDirective, FormEditComponent,FormListComponent, SortingPipe, ProfileComponent, LoginComponent, UsersTableComponent, NotificationComponent, ProjectListComponent],
   imports: [
     CommonModule,
     DashboardsRoutingModule,
@@ -34,9 +39,11 @@ import { UsersTableComponent } from './components/users-table/users-table.compon
     Ng2SearchPipeModule,
     FormsModule,
     NgxPaginationModule,
+    OverlayModule
    
   ],
   providers:[
+    UserService
 
   ]
 })

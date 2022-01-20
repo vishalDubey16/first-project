@@ -77,42 +77,8 @@
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="exampleInputEmail1">City</label>
-        <input type="text" class="form-control" placeholder="Enter Last Name" formControlName="City"
-            [ngClass]="{ 'is-invalid': submitted && f.City.errors }" />
-        <div *ngIf="submitted && f.City.errors" class="invalid-feedback">
-            <div *ngIf="f.City.errors.required">please select City</div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="exampleInputEmail1">Company</label>
-        <input type="text" class="form-control" placeholder="Enter Last Name" formControlName="Company"
-            [ngClass]="{ 'is-invalid': submitted && f.Company.errors }" />
-        <div *ngIf="submitted && f.Company.errors" class="invalid-feedback">
-            <div *ngIf="f.Company.errors.required">please select City</div>
-        </div>
-    </div>
-
+    
    
-    <div class="form-group">
-        <label for="exampleInputEmail1">Designation</label>
-        <input type="text" class="form-control" placeholder="Enter Last Name" formControlName="Designation"
-            [ngClass]="{ 'is-invalid': submitted && f.Designation.errors }" />
-        <div *ngIf="submitted && f.Designation.errors" class="invalid-feedback">
-            <div *ngIf="f.Designation.errors.required">please select Designation</div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="exampleInputEmail1">Message</label>
-        <input type="text" class="form-control" placeholder="Enter Last Name" formControlName="Message"
-            [ngClass]="{ 'is-invalid': submitted && f.Message.errors }" />
-        <div *ngIf="submitted && f.Message.errors" class="invalid-feedback">
-            <div *ngIf="f.Message.errors.required">plase Enter message</div>
-        </div>
-    </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
 

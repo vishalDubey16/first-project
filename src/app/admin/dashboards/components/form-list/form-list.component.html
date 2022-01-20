@@ -25,6 +25,12 @@
   </div>
   <div id="datatable">
   </div>
+  
+  <div class="button">
+            <button type="button" class="btn btn-primary" #profileBtnRef 
+            (click)="viewProfile(profileBtnRef)" >Add User</button>
+          </div>
+       
 
 
   <!-- for sorting -->
@@ -52,10 +58,7 @@
         <th scope="col">Email </th>
         <th scope="col">Phone Number</th>
         <th scope="col">Country</th>
-        <th scope="col">State</th>
-        <th scope="col">City </th>
-        <th scope="col">Company</th>
-        <th scope="col">Designation</th>
+       
        
         <th scope="col">Action</th>
       </tr>
@@ -70,11 +73,8 @@
             <td>{{user.Email}}</td>
             <td>{{user.Phone}}</td>
             <td>{{user.Country}}</td>
-            <td>{{user.State}}</td>
-            <td>{{user.City}}</td>
-            <td>{{user.Company}}</td>
-            <td>{{user.Designation}}</td>
-          
+           
+           
             <td><button class="btn btn-primary" routerLink="/dashboard/edit-form/{{user.id}}">Edit</button>
             <button class="btn btn-danger" (click) ="deleteUser(user.id)">Remove</button></td> 
           </tr>

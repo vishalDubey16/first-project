@@ -16,5 +16,12 @@ export var ApiService = {
       Send_mail : 'ContactUs_Mail',
       login_admin : 'adminlogin',   
       User_detail : 'user_datatable',
+      User_Login: 'signin',
+      User_SignUp:'register',
+      Verify_Email:'chkemailverify',
+      Check_ForgotEmail:'checkforgotemail',
+      Reset_Password:'reset',
+      Notification_Datatable:'notification_datatable',
+      Parameter_Type_Datatable: 'parameter_type_datatable',
 };
   
